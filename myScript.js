@@ -12,7 +12,7 @@ function toDataURL(src, callback, outputFormat) {
     dataURL = canvas.toDataURL(outputFormat);
     callback(dataURL);
   };
-  //img.src = src;
+  img.src = src;
   if (img.complete || img.complete === undefined) {
     img.src = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
     img.src = src;
