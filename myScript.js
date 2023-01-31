@@ -19,7 +19,7 @@ function toDataURL(src, callback, outputFormat) {
   }
 }
 
-toDataURL('https://relay.viewcam.co.uk/feeds/sidmouthhotel/preview.jpg?', function(dataUrl) {
+toDataURL('https://relay.viewcam.co.uk/sidmouthjacobs/preview.jpg?', function(dataUrl) {
   //console.log('RESULT:', dataUrl)
   document.querySelector("#myImg")
     .src = dataUrl;
