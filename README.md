@@ -5,5 +5,5 @@ Created to take a webcam static image, convert to base64 to overcome the CORS is
 
 The following is executed in paper.js:
 
-Colors of Pixels
+Colors of Pixels <br>
 To find the color of a specific pixel in a raster, we use raster.getPixel(x, y) and pass it the x and y offset of the pixel we want to look at. The raster.getPixel(x, y) function returns the color of the pixel as an Color.
