@@ -1,6 +1,8 @@
 # imageconvertor
 paper.js image convertor
 
+https://jmnesbitt.github.io/imageconvertor/
+
 Created to take a webcam static image, convert to base64 to overcome the CORS issues from using external URL images (and overcome the tainted canvas), then use paper.js to convert the base64 image into circle paths. 
 
 The following is executed in paper.js:
