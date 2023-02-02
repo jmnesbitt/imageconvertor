@@ -1,4 +1,5 @@
 window.onload = function() {
+  imgData = canvas.toDataURL('image/png');
   $.post("https://github.com/jmnesbitt/imageconvertor/blob/main/image-saver.php"),
   {
     imgdata: imgData,
