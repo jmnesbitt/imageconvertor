@@ -17,4 +17,4 @@ function saveImageToDisk(url,path) {
 
 }
 
-saveImageToDisk("https://relay.viewcam.co.uk/sidmouthjacobs/preview.jpg" "/workspaces/imageconvertor/node_modules/uploads" + Date.now() + ".jpg")
+saveImageToDisk("https://relay.viewcam.co.uk/sidmouthjacobs/preview.jpg", "/workspaces/imageconvertor/node_modules/uploads" + Date.now() + ".jpg")
