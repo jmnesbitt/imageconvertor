@@ -1,12 +1,3 @@
-window.onload = function() {
-  imgData = canvas.toDataURL('image/png');
-  $.post("https://github.com/jmnesbitt/imageconvertor/blob/main/image-saver.php"),
-  {
-    imgdata: imgData,
-    pass: "mypass"
-  }
-};
-
 // baseb4 img converter
 function toDataURL(src, callback, outputFormat) {
   var img = new Image();
