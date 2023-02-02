@@ -1,12 +1,17 @@
-const download = require('image-downloader');
+function downloadImages(link,target,cb) {
+	const download = require('image-downloader')
+	console.log('DOWNLOADING IMAGE', link, target)
+	options = {
+		url: 'https://www.thetvdb.com/banners/'+link,
+		dest: 'https://github.com/jmnesbitt/imageconvertor/blob/main/node_modules/uploads/photo.jpg'   // Save to /path/to/dest/photo.jpg
+	  }
 
-options = {
-  url: 'https://relay.viewcam.co.uk/sidmouthjacobs/preview.jpg?',
-  dest: 'https://github.com/jmnesbitt/imageconvertor/blob/main/node_modules/uploads/photo.jpg',     // will be saved to /path/to/dest/photo.jpg
-};
-
-download.image(options)
-  .then(({ filename }) => {
-    console.log('Saved to', filename); // saved to /path/to/dest/photo.jpg
-  })
-  .catch((err) => console.error(err));
+	  download.image(options)
+		.then(({ filename, image }) => {
+		  console.log('File saved to', filename)
+		  cb()
+		}).catch((err) => {
+			console.log(err)
+		  throw err
+		})
+}
