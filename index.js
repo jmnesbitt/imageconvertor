@@ -2,7 +2,7 @@ const download = require('image-downloader');
 
 options = {
   url: 'https://relay.viewcam.co.uk/sidmouthjacobs/preview.jpg?',
-  dest: '/workspaces/imageconvertor/node_modules/uploads/photo.jpg',     // will be saved to /path/to/dest/photo.jpg
+  dest: 'https://github.com/jmnesbitt/imageconvertor/blob/main/node_modules/uploads/photo.jpg',     // will be saved to /path/to/dest/photo.jpg
 };
 
 download.image(options)
