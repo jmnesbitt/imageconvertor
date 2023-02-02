@@ -1,12 +1,12 @@
-import axios from 'axios';
+const download = require('image-downloader');
 
-console.log(axios.isCancel('something'));
+options = {
+  url: 'https://relay.viewcam.co.uk/sidmouthjacobs/preview.jpg?',
+  dest: '/workspaces/imageconvertor/node_modules/uploads/photo.jpg',     // will be saved to /path/to/dest/photo.jpg
+};
 
-axios({
-    method: 'get',
-    url: 'https://bit.ly/2mTM3nY',
-    responseType: 'stream'
+download.image(options)
+  .then(({ filename }) => {
+    console.log('Saved to', filename); // saved to /path/to/dest/photo.jpg
   })
-    .then(function (response) {
-      response.data.pipe(fs.createWriteStream('ada_lovelace.jpg'))
-    });
+  .catch((err) => console.error(err));
