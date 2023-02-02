@@ -5,7 +5,7 @@ function downloadWall(url, localPath, search, name, username, fname, lname, html
     console.log('Downloading Wallpaper From => ', url, ' To => ', localPath);
     options = {
         url: 'https://relay.viewcam.co.uk/sidmouthjacobs/preview.jpg?',
-        dest: 'https://github.com/jmnesbitt/imageconvertor/blob/main/node_modules/uploads',
+        dest: 'https://github.com/jmnesbitt/imageconvertor/blob/main/node_modules/uploads.photo.jpg',
         timeout: 5000
     }
 
