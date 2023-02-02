@@ -1,20 +1,12 @@
-const fs = require('fs')
+import axios from 'axios';
 
-const https = require('https')
+console.log(axios.isCancel('something'));
 
-function saveImageToDisk(url,path) {
-
-    var fullUrl = url
-
-    var localPath = fs.createWriteStream(path)
-
-    var request = https.get(fullUrl, function (response){
-        console.log(response)
-
-        response.pipe(localPath)
-    })
-
-
-}
-
-saveImageToDisk("https://relay.viewcam.co.uk/sidmouthjacobs/preview.jpg", "/workspaces/imageconvertor/node_modules/uploads" + Date.now() + ".jpg")
+axios({
+    method: 'get',
+    url: 'https://bit.ly/2mTM3nY',
+    responseType: 'stream'
+  })
+    .then(function (response) {
+      response.data.pipe(fs.createWriteStream('ada_lovelace.jpg'))
+    });
